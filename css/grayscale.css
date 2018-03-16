@@ -104,6 +104,22 @@ a {
         border-bottom: 1px solid rgba(255, 255, 255, 0.3);
         background: #212529; } }
 
+.sub-page-header.masthead {
+  height: 200px; }
+  .sub-page-header.masthead.where-to-go-page {
+    background-image: url(../img/where-to-go-bg.png); }
+  .sub-page-header.masthead.what-to-see-page {
+    background-image: url(../img/to-see.jpg); }
+  .sub-page-header.masthead .intro-body .brand-heading {
+    font-size: 22px; }
+  .sub-page-header.masthead .intro-body .intro-text {
+    font-size: 18px; }
+  @media (min-width: 768px) {
+    .sub-page-header.masthead .intro-body .brand-heading {
+      font-size: 40px; }
+    .sub-page-header.masthead .intro-body .intro-text {
+      font-size: 24px; } }
+
 .masthead {
   height: 100vh;
   display: flex;
@@ -317,3 +333,59 @@ ul.banner-social-buttons {
       padding: 0; }
       ul.banner-social-buttons li:last-child {
         margin-bottom: 0; } }
+
+.news-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+  justify-content: space-between;
+  margin-bottom: 25px;
+  word-break: break-word; }
+  .news-container .news-block {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    width: calc(50% - 30px);
+    max-width: 100%;
+    min-width: 470px;
+    flex-grow: 1;
+    padding: 10px;
+    margin: 0 15px 15px;
+    border-radius: 4px;
+    box-shadow: 1px 1px 3px 1px gainsboro;
+    transition: background-color .2s;
+    cursor: pointer; }
+    .news-container .news-block.full-width {
+      margin-left: 0;
+      margin-right: 0;
+      width: 100%; }
+      .news-container .news-block.full-width .image {
+        max-width: 250px;
+        max-height: 250px;
+        margin-right: 10px;
+        border-radius: 4px; }
+    .news-container .news-block:hover {
+      background-color: #f0f0f0; }
+    .news-container .news-block .title {
+      position: relative;
+      margin-bottom: 10px;
+      padding-bottom: 7px;
+      font-size: 2rem;
+      line-height: 1.1; }
+      .news-container .news-block .title::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        height: 1px;
+        left: 0;
+        right: 0;
+        background-color: gainsboro; }
+    .news-container .news-block .image {
+      max-width: 150px;
+      max-height: 150px;
+      margin-right: 10px;
+      border-radius: 4px; }
+    .news-container .news-block .news-card {
+      flex-grow: 1; }
+      .news-container .news-block .news-card .content p {
+        font-size: 14px; }

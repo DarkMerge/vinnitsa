@@ -142,6 +142,40 @@ a {
   }
 }
 
+.sub-page-header.masthead {
+	height: 200px;
+
+	&.where-to-go-page {
+		background-image: url(../img/where-to-go-bg.png);
+	}
+
+	&.what-to-see-page {
+		background-image: url(../img/to-see.jpg);
+	}
+
+	.intro-body {
+		.brand-heading {
+			font-size: 22px;
+		}
+
+		.intro-text {
+			font-size: 18px;
+		}
+	}
+
+	@media (min-width:768px) {
+		.intro-body {
+			.brand-heading {
+				font-size: 40px;
+			}
+
+			.intro-text {
+				font-size: 24px;
+			}
+		}
+	}
+}
+
 .masthead {
 	height: 100vh;	// vh - viewport height высота видимой области страницы 100 максимальное значение 0 минимальное
 	display: flex;
@@ -437,4 +471,85 @@ ul.banner-social-buttons {
       }
     }
   }
+}
+
+.news-container {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: stretch;
+	justify-content: space-between;
+	margin-bottom: 25px;
+	word-break: break-word;
+
+	.news-block {
+		display: flex;
+		justify-content: center;
+		align-items: flex-start;
+		width: calc(50% - 30px);
+		max-width: 100%;
+		min-width: 470px;
+		flex-grow: 1;
+		padding: 10px;
+		margin: 0 15px 15px;
+		border-radius: 4px;
+		box-shadow: 1px 1px 3px 1px gainsboro;
+		transition: background-color .2s;
+		cursor: pointer;
+
+		&.full-width {
+			margin-left: 0;
+			margin-right: 0;
+			width: 100%;
+
+			.image {
+				max-width: 250px;
+				max-height: 250px;
+				margin-right: 10px;
+				border-radius: 4px;
+			}
+		}
+
+		&:hover {
+			background-color: darken(#fff, 6%);
+		}
+
+		.title {
+			position: relative;
+			margin-bottom: 10px;
+			padding-bottom: 7px;
+			font-size: 2rem;
+			line-height: 1.1;
+
+			&::after {
+				content: "";
+				position: absolute;
+				bottom: 0;
+				height: 1px;
+				left: 0;
+				right: 0;
+				background-color: gainsboro;
+			}
+		}
+
+		.image {
+			max-width: 150px;
+			max-height: 150px;
+			margin-right: 10px;
+			border-radius: 4px;
+		}
+
+		.news-card {
+			flex-grow: 1;
+
+			.content {
+				p {
+					font-size: 14px;
+				}
+			}
+		}
+	}
+}
+
+.what-to-see-section {
+
 }
